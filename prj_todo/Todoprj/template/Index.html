@@ -1,0 +1,42 @@
+{%  extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner">
+                <div class="banner-text">
+                    <h2>ToDo</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class=" row">
+        <div class="col-md-6">
+            <form method="post" class="p-3 shadow">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" class="form-control" name="Task" placeholder="Enter your task">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="Priority" placeholder="Enter the priority">
+            </div>
+                <div class="form-group">
+                <input type="date" class="form-control" name="Date" placeholder="Fill the Date">
+            </div>
+                <input type="submit" class="btn btn-success">
+            </form>
+        </div>
+        <h1><u>Task to be completed</u></h1>
+            {% for i in show %}
+
+    </div>
+
+            {% endfor %}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <h1>Please click the submit button to delete</h1>
+    <input type="submit" class="btn btn-danger">
+</form>
+
+{% endblock %}
